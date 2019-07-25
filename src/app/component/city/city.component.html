@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="weather">
+        <h3><strong> City:</strong>{{weather.city.name}}</h3>
+        <h5>longitude:{{weather.city.coord.lon}}</h5>
+        <h5>longitude:{{weather.city.coord.lat}}</h5>
+        <h5><strong>Temperature</strong>:{{weather.list[0].main.temp}}</h5>
+        <h5><strong>tempMax:</strong>{{weather.list[0].main.temp_max}} </h5>
+        <h5><strong>tempMin: </strong>{{weather.list[0].main.temp_min}}</h5>
+        <h5> <strong>The weather description:</strong> {{weather.list[0].weather[0].description}}</h5>
+        <h5> <strong>humidity :</strong>{{weather.list[0].main.humidity}}</h5>
+
+    </div>
+    <div fxLayout='row' fxLayoutAlign="end end">
+        <button mat-button (click)="onNoClick()">Ok</button>
+    </div>
+</div>

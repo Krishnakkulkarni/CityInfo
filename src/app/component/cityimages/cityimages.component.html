@@ -1,0 +1,19 @@
+<div fxLayoutGap="2%" fxLayout='column' fxLayoutAlign="start start">
+    <div>
+        <label>Enter city</label>
+    </div>
+    <div>
+        <input matInput type="text" class="form-control" name="city" [(ngModel)]="city" autocomplete="off">
+        <button class="btn btn-success" (click)="getimage()">Get Images</button>
+    </div>
+    <div class="image" fxLayoutGap="1%" fxLayout='row' fxLayout='row wrap' fxLayoutAlign="start start">
+        <div *ngFor="let image of images.hits">
+            <div>
+                <img class="resize" src="{{image.largeImageURL}}">
+            </div>
+        </div>
+    </div>
+    <div>
+        <a routerLink="/citylist" routerLinkActive="active">Get weather</a>
+    </div>
+</div>

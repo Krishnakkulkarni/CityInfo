@@ -1,0 +1,15 @@
+<div class="container" fxLayoutGap="1%" fxLayout="column" fxLayoutAlign="space-between start">
+
+    <h3 class="text-center primary "> Enter City </h3>
+    <form>
+        <div fxLayoutGap="1%" fxLayout="row" fxLayoutAlign="space-between start">
+            <mat-label> city</mat-label>
+            <input matInput type="text" class="form-control" name="city" [(ngModel)]="city" autocomplete="off">
+
+            <button class="btn btn-success" (click)="saveForm()">Check weather</button>
+        </div>
+    </form>
+    <div>
+        <button (click)="show()">View Pictures of the city</button>
+    </div>
+</div>
